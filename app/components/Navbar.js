@@ -72,32 +72,32 @@ const shopOptions = (
         </li>
         <li>
           <a href="/" className="hover-line">
-            shop
+            unisex hoodies
           </a>
         </li>
         <li>
           <a href="/" className="hover-line">
-            shop
+            unisex zip hoodies
           </a>
         </li>
         <li>
           <a href="/" className="hover-line">
-            shop
+            unisex sweatshirts
           </a>
         </li>
         <li>
           <a href="/" className="hover-line">
-            shop
+            unisex tees
           </a>
         </li>
         <li>
           <a href="/" className="hover-line">
-            shop
+            women's tanks
           </a>
         </li>
         <li>
           <a href="/" className="hover-line">
-            shop
+            unisex tanks
           </a>
         </li>
       </ul>
@@ -110,32 +110,17 @@ const shopOptions = (
         </li>
         <li>
           <a href="/" className="hover-line">
-            shop
+            phone cases
           </a>
         </li>
         <li>
           <a href="/" className="hover-line">
-            shop
+            framed posters
           </a>
         </li>
         <li>
           <a href="/" className="hover-line">
-            shop
-          </a>
-        </li>
-        <li>
-          <a href="/" className="hover-line">
-            shop
-          </a>
-        </li>
-        <li>
-          <a href="/" className="hover-line">
-            shop
-          </a>
-        </li>
-        <li>
-          <a href="/" className="hover-line">
-            shop
+            posters
           </a>
         </li>
       </ul>
@@ -205,10 +190,13 @@ const rightNavbarElements = (
         <SearchOutlinedIcon fontSize="medium" />
       </a>
     </li>
-    <li style={{ paddingRight: "0px" }}>
+    <li style={{ paddingRight: "0px" }} className=" p-0 relative group">
       <a href="#">
         <LocalMallOutlinedIcon fontSize="medium" />
       </a>
+      <span className=" group-hover:bg-customYellow notification-badge  bg-gray-50 text-customBlack">
+        0
+      </span>
     </li>
   </ul>
 );
@@ -216,8 +204,11 @@ const rightNavbarElements = (
 const Navbar = () => {
   return (
     <>
-      <nav style={{ backgroundColor: "#212122" }} className="py-2">
-        <div className=" main-content flex items-center justify-between px-9">
+      <nav
+        style={{ backgroundColor: "#212122" }}
+        className="py-2 w-full sticky top-0 z-50"
+      >
+        <div className="main-content flex items-center justify-between px-9">
           {leftNavbarElements}
           {/* logo */}
           <a href="/">

@@ -4,11 +4,19 @@
 
 @font-face {
   font-family: "made-tommy-soft";
-  src: url("./fonts/topAnnouncement.otf") format("opentype");
+  src: url("./fonts/madeTommySoftRegular.otf") format("opentype");
+}
+
+* {
+  line-height: 24px;
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: "made-tommy-soft", sans-serif;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -37,11 +45,12 @@ body {
 
 .shop-options div ul .title {
   font-weight: 900;
+  margin-bottom: 18px;
 }
 
 .shop-options div ul li {
   text-align: left;
-  padding: 6px 0px;
+  margin: 1px auto;
 }
 
 /* for all nav */
@@ -68,11 +77,26 @@ body {
   content: "";
   display: block;
   position: absolute;
-  top: 100%;
+  margin-top: 0px;
   left: 0;
   width: 0%;
   height: 1px;
   transition: all 300ms linear;
   transform-origin: left center;
   background-color: #e1c300;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background-color: white;
+  transition: all ease-in-out 250ms;
 }

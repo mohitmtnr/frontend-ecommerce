@@ -1,4 +1,6 @@
+import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
+import SlideShow from "./components/SlideShow";
 import { TopAnnouncement } from "./components/TopAnnouncement";
 
 export default function Home() {
@@ -6,6 +8,7 @@ export default function Home() {
     <main>
       <TopAnnouncement />
       <Navbar />
+      <Banner />
     </main>
   );
 }

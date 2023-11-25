@@ -9,9 +9,12 @@ module.exports = {
     extend: {
       colors: {
         customYellow: "#e1c300",
+        customBlack: "#212122",
+        customGray: "#252525",
       },
       backgroundColor: {
         customBlack: "#212122",
+        customYellow: "#e1c300",
         customGray: "#252525",
       },
       backgroundImage: {
