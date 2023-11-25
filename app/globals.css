@@ -2,26 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: "made-tommy-soft";
+  src: url("./fonts/topAnnouncement.otf") format("opentype");
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "made-tommy-soft", sans-serif;
+}
+
+/* Navbar */
+
+.right-ul li {
+  padding: 0px 10px;
+}
+
+.left-ul li {
+  padding: 0px 15px;
+}
+
+.main-content ul li a {
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+}
+
+.main-content ul li a:hover,
+.main-content-content ul li {
+  color: #e1c300;
+}
+
+.main-content img {
+  object-fit: contain;
+}
+
+.main-conten ul a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  will-change: transform;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: var(--color-header-links-hover, --color-accent);
 }
