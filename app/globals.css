@@ -13,38 +13,66 @@ body {
 
 /* Navbar */
 
+/* right */
 .right-ul li {
   padding: 0px 10px;
 }
 
+.brand-options {
+  padding: 18px 20px;
+}
+
+.brand-options ul li {
+  margin: 6px auto;
+}
+
+/* left */
 .left-ul li {
   padding: 0px 15px;
 }
 
-.main-content ul li a {
-  cursor: pointer;
-  transition: all ease-in-out 300ms;
+.shop-options div {
+  margin: 50px 30px;
 }
 
-.main-content ul li a:hover,
-.main-content-content ul li {
+.shop-options div ul .title {
+  font-weight: 900;
+}
+
+.shop-options div ul li {
+  text-align: left;
+  padding: 6px 0px;
+}
+
+/* for all nav */
+.main-content ul li a {
+  position: relative;
+  cursor: pointer;
+  transition: all ease-in-out 250ms;
+  padding-bottom: 4px;
+}
+
+.main-content ul li a:hover {
   color: #e1c300;
+}
+
+.main-content ul li a.hover-line:hover:after {
+  width: 100%;
 }
 
 .main-content img {
   object-fit: contain;
 }
 
-.main-conten ul a:after {
+.main-content ul li a.hover-line:after {
   content: "";
   display: block;
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
-  will-change: transform;
+  width: 0%;
   height: 1px;
-  transform: scaleX(0);
+  transition: all 300ms linear;
   transform-origin: left center;
-  background: var(--color-header-links-hover, --color-accent);
+  background-color: #e1c300;
 }

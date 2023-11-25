@@ -1,5 +1,5 @@
-import Navbar from "./coponents/Navbar";
-import { TopAnnouncement } from "./coponents/TopAnnouncement";
+import Navbar from "./components/Navbar";
+import { TopAnnouncement } from "./components/TopAnnouncement";
 
 export default function Home() {
   return (
