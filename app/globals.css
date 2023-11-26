@@ -7,6 +7,11 @@
   src: url("./fonts/madeTommySoftRegular.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "qualy-alternative";
+  src: url("./fonts/qualy-alternative.otf") format("opentype");
+}
+
 * {
   line-height: 24px;
   font-size: 17px;
@@ -34,6 +39,19 @@ body {
   margin: 6px auto;
 }
 
+.cart .start-shopping-button {
+  background: linear-gradient(#212122, #212122 50%, white 50%, white);
+  background-size: 100% 200%;
+  border: 1px solid #212122 !important;
+  /*trasition effect for background*/
+  transition: all linear 250ms;
+}
+
+.cart .start-shopping-button:hover {
+  background-position: 100% 101%;
+  color: #212122;
+}
+
 /* left */
 .left-ul li {
   padding: 0px 15px;
@@ -44,8 +62,11 @@ body {
 }
 
 .shop-options div ul .title {
+  font-family: "qualy-alternative", sans-serif;
+  letter-spacing: 2px;
   font-weight: 900;
   margin-bottom: 18px;
+  font-size: 90px !important;
 }
 
 .shop-options div ul li {
@@ -61,7 +82,7 @@ body {
   padding-bottom: 4px;
 }
 
-.main-content ul li a:hover {
+.main-content ul li > a:hover {
   color: #e1c300;
 }
 
@@ -69,7 +90,7 @@ body {
   width: 100%;
 }
 
-.main-content img {
+.main-content > img {
   object-fit: contain;
 }
 
@@ -99,4 +120,87 @@ body {
   border-radius: 100%;
   background-color: white;
   transition: all ease-in-out 250ms;
+}
+
+/* banner */
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  transition: all ease-in-out 250ms;
+}
+
+.banner-image {
+  height: 650px;
+  width: 100%;
+}
+
+.prev-next-button {
+  position: absolute;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #212122;
+  justify-content: center;
+  align-items: center;
+  top: 45%;
+  z-index: 10;
+  cursor: pointer;
+  transition: all linear 250ms;
+}
+
+.prev-next-button:hover {
+  background-color: white;
+  color: #212122;
+}
+
+.banner-slider:hover > .prev-next-button {
+  opacity: 1;
+  visibility: visible;
+}
+
+.banner .apparel-title {
+  font-family: "qualy-alternative", sans-serif;
+}
+
+.banner .banner-shop-button {
+  background: linear-gradient(white, white 50%, #212122 50%, #212122);
+  background-size: 100% 200%;
+  /*trasition effect for background*/
+  transition: all linear 250ms;
+}
+
+.banner-shop-button:hover {
+  background-position: 100% 100%;
+  color: white;
+}
+
+/* slide show  */
+.slide-show {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  height: 150px;
+  border-radius: 150px 15px 15px 150px;
+}
+
+.slide-show-image {
+  width: 150px;
+  border-radius: 100%;
+}
+
+.slide-show-brand-name {
+  font-family: "qualy-alternative", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 900;
+  font-size: xx-large;
+}
+
+.b {
+  border: 2px solid red;
 }

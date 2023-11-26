@@ -1,15 +1,56 @@
 "use client";
 import React from "react";
-import Carousel from "./Carousel";
-import image1 from "@/public/brands/Bitfins_logo_1f1299f3-eb5c-43bc-a76b-7b08dc7b454f_375x_crop_center 1all.png";
-import image2 from "@/public/brands/cryptoraggies-logo-profilepic-trans-2000px_375x_crop_center 1all.png";
-import image3 from "@/public/brands/Logo_375x_crop_center 1all.png";
-import image4 from "@/public/brands/meSG3lth_400x400_1_375x_crop_center 1all.png";
-import image5 from "@/public/brands/pendulum-brava-logo_375x_crop_center 1all.png";
+import Image from "next/image";
+import Slider from "react-slick";
 
-const SlideShow = () => {
-  const carouseImages = [image1, image2, image3, image4, image5];
-  return <Carousel images={carouseImages} height={100} width={100} />;
+const SlideShow = ({ brands }) => {
+  const settings = {
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 5000,
+    autoplaySpeed: 5000,
+    swipeToSlide: true,
+    cssEase: "linear",
+  };
+
+  return (
+    <div className="my-20 cursor-pointer">
+      <Slider {...settings}>
+        {brands &&
+          brands.map((data, index) => (
+            <div key={index}>
+              <div className="slide-show  bg-customBlack">
+                <a href={data.linkToBrand}>
+                  <Image
+                    src={data.image}
+                    width={375}
+                    height={375}
+                    alt={`logo-${index}`}
+                    className="slide-show-image"
+                    loading="eager"
+                    priority={true}
+                  />
+                </a>
+
+                <div className="slide-show-content text-gray-50 flex flex-col justify-evenly h-full pr-6">
+                  <a
+                    href={data.linkToBrand}
+                    className="slide-show-brand-name text-right"
+                  >
+                    {data.brandName}
+                  </a>
+                  <a href={data.linkToBrand} className="underline text-right">
+                    shop now
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+      </Slider>
+    </div>
+  );
 };
 
 export default SlideShow;
