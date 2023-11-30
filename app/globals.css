@@ -190,7 +190,8 @@ body {
 }
 
 .slide-show-image {
-  width: 150px;
+  max-width: 150px;
+  max-height: 150px;
   border-radius: 100%;
 }
 
@@ -199,8 +200,4 @@ body {
   letter-spacing: 2px;
   font-weight: 900;
   font-size: xx-large;
-}
-
-.b {
-  border: 2px solid red;
 }

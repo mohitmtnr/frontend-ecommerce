@@ -13,16 +13,17 @@ const SlideShow = ({ brands }) => {
     autoplaySpeed: 5000,
     swipeToSlide: true,
     cssEase: "linear",
+    arrows: false,
   };
 
   return (
-    <div className="my-20 cursor-pointer">
+    <div className="my-20 mx-0 cursor-pointer">
       <Slider {...settings}>
         {brands &&
           brands.map((data, index) => (
             <div key={index}>
               <div className="slide-show  bg-customBlack">
-                <a href={data.linkToBrand}>
+                <a href={data.linkToBrand} className="w-fit">
                   <Image
                     src={data.image}
                     width={375}

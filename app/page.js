@@ -8,8 +8,6 @@ import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
 import SlideShow from "./components/SlideShow";
 import { TopAnnouncement } from "./components/TopAnnouncement";
-import Cart from "./components/Cart";
-import SearchBox from "./components/SearchBox";
 
 export default function Home() {
   const brands = [
@@ -24,7 +22,7 @@ export default function Home() {
   ];
 
   return (
-    <main>
+    <main className="w-full">
       <TopAnnouncement />
       <Navbar brands={brands} />
       <Banner />

@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 import LeftNavbarOptions from "./LeftNavbarOptions";
 import RightNavOptions from "./RightNavOptions";
 
@@ -13,11 +13,11 @@ const Navbar = ({ brands }) => {
         <div className="main-content flex items-center justify-between px-9">
           <LeftNavbarOptions brands={brands} />
           <a href="/">
-            <img
+            <Image
               width={124}
               height={70}
               alt="brava logo"
-              src="https://bravaland.com/cdn/shop/files/Artboard_1.png?v=1678787853"
+              src="../../public/brava-logo.webp"
             />
           </a>
           <RightNavOptions />
