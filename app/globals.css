@@ -201,3 +201,23 @@ body {
   font-weight: 900;
   font-size: xx-large;
 }
+
+/* new arrival */
+
+#new-arrival {
+  font-family: "qualy-alternative", sans-serif;
+}
+
+.send-email-form label {
+  transition: all 250ms ease-in-out;
+}
+
+.send-email-form button {
+  padding: 14px 50px;
+  margin-left: -2px;
+}
+
+.send-email-form input:focus + label {
+  top: -20px !important;
+  transform: scale(0.8);
+}

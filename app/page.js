@@ -8,6 +8,8 @@ import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
 import SlideShow from "./components/SlideShow";
 import { TopAnnouncement } from "./components/TopAnnouncement";
+import NewArrival from "./components/NewArrival";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const brands = [
@@ -27,6 +29,8 @@ export default function Home() {
       <Navbar brands={brands} />
       <Banner />
       <SlideShow brands={brands} />
+      <NewArrival />
+      <Footer />
     </main>
   );
 }
