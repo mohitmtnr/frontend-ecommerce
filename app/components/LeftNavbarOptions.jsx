@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 
 const LeftNavbarOptions = ({ brands }) => {
@@ -7,15 +8,15 @@ const LeftNavbarOptions = ({ brands }) => {
     <div className="brand-options opacity-0 invisible absolute group-hover:visible group-hover:opacity-100 group-hover:translate-y-3 transition-all duration-200 translate-y-6  bg-customGray text-white shadow-md">
       <ul>
         <li>
-          <a className="hover-line" href="/">
+          <Link className="hover-line" href="/all-brands">
             all brands
-          </a>
+          </Link>
         </li>
         {brands.map((data, index) => (
           <li key={index}>
-            <a className="hover-line" href="/">
+            <Link className="hover-line" href={data.linkToBrand}>
               {data.brandName}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -28,61 +29,61 @@ const LeftNavbarOptions = ({ brands }) => {
       <div className="grid grid-cols-2">
         <ul className="ml-5">
           <li className="title">
-            <a href="/" className="hover-line">
+            <Link href="/apparel" className="hover-line">
               apparel
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/" className="hover-line">
+            <Link href="/unisex-hoodies" className="hover-line">
               unisex hoodies
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/" className="hover-line">
+            <Link href="/unisex-zip-hoodies" className="hover-line">
               unisex zip hoodies
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/" className="hover-line">
+            <Link href="/unisex-sweatshirts" className="hover-line">
               unisex sweatshirts
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/" className="hover-line">
+            <Link href="/unisex-tees" className="hover-line">
               unisex tees
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/" className="hover-line">
+            <Link href="/women-tanks" className="hover-line">
               women's tanks
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/" className="hover-line">
+            <Link href="/unisex-tanks" className="hover-line">
               unisex tanks
-            </a>
+            </Link>
           </li>
         </ul>
         <ul>
           <li className="title">
-            <a href="/" className="hover-line">
+            <Link href="/home" className="hover-line">
               home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/" className="hover-line">
+            <Link href="/phone-cases" className="hover-line">
               phone cases
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/" className="hover-line">
+            <Link href="/framed-posters" className="hover-line">
               framed posters
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/" className="hover-line">
+            <Link href="/posters" className="hover-line">
               posters
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -92,28 +93,28 @@ const LeftNavbarOptions = ({ brands }) => {
   return (
     <ul className="left-ul text-gray-50 flex flex-row">
       <li className="group ">
-        <a href="/" className="hover-line ">
-          brands{" "}
+        <Link href="/brands" className="hover-line ">
+          brands
           <KeyboardArrowDownOutlinedIcon fontSize="small" className="pb-1" />
-        </a>
+        </Link>
         {brandOptions}
       </li>
       <li className="group ">
-        <a href="/" className="hover-line">
-          shop{" "}
+        <Link href="/shop" className="hover-line">
+          shop
           <KeyboardArrowDownOutlinedIcon fontSize="small" className="pb-1" />
-        </a>
+        </Link>
         {shopOptions}
       </li>
       <li>
-        <a href="/" className="hover-line">
+        <Link href="/premium" className="hover-line">
           premium
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="/" className="hover-line">
+        <Link href="/gift-cards" className="hover-line">
           gift cards
-        </a>
+        </Link>
       </li>
     </ul>
   );

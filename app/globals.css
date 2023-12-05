@@ -48,10 +48,23 @@ body {
 }
 
 .cart .start-shopping-button:hover {
-  background-position: 100% 101%;
+  background-position: 100% 100%;
   color: #212122;
 }
 
+#new-arrival .start-shopping-button {
+  background: linear-gradient(white, white 50%, #212122 50%, #212122);
+  background-size: 100% 200%;
+  color: black;
+  transition: all linear 250ms;
+
+  border: none !important;
+}
+
+#new-arrival .start-shopping-button:hover {
+  background-position: 100% 100%;
+  color: white;
+}
 /* left */
 .left-ul li {
   padding: 0px 15px;
@@ -204,8 +217,14 @@ body {
 
 /* new arrival */
 
-#new-arrival {
+#new-arrival h1,
+#premium-gear h1 {
   font-family: "qualy-alternative", sans-serif;
+}
+
+#new-arrival p,
+#premium-gear p {
+  font-family: "made-tommy-soft", sans-serif;
 }
 
 .send-email-form label {
@@ -218,6 +237,25 @@ body {
 }
 
 .send-email-form input:focus + label {
-  top: -20px !important;
+  top: -15px !important;
   transform: scale(0.8);
+}
+
+/* premium gear */
+
+.premium-header::after {
+  content: "";
+  margin: 8px auto;
+  width: 50%;
+  height: 3px;
+  background-color: #212122;
+  display: block;
+}
+
+#collection-card {
+  transition: all 250ms ease-in-out;
+}
+
+#collection-card:hover {
+  box-shadow: 0px 5px 10px 2px #21212219;
 }

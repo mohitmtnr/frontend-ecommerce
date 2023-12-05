@@ -2,6 +2,7 @@
 import Slider from "react-slick";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import image1 from "@/public/carousel/DSC00058_CAROUSEL_1_1440x650_crop_center 1all.png";
 import image2 from "@/public/carousel/DSC00198_CAROUSEL_1_1440x650_crop_center 1all.png";
 import image3 from "@/public/carousel/DSC09179_CAROUSEL_1_1440x650_crop_center 1all.png";
@@ -113,12 +114,12 @@ const Banner = () => {
               >
                 {data.apparel}
               </h1>
-              <a
+              <Link
                 href={data.linkToApparel}
                 className=" mt-10 banner-shop-button px-8 py-3 rounded-full text-customBlack"
               >
                 shop now
-              </a>
+              </Link>
             </div>
           </div>
         </div>

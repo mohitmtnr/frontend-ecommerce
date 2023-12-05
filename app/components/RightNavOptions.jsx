@@ -4,6 +4,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import Link from "next/link";
 import Cart from "./Cart";
 import SearchBox from "./SearchBox";
 
@@ -13,49 +14,58 @@ const RightNavOptions = () => {
   return (
     <ul className="right-ul text-gray-50 flex flex-row">
       <li>
-        <a href="/" className="hover-line">
+        <Link href="/become-an-affiliate" className="hover-line">
           become an affiliate
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="/">
+        <Link href="/twitter">
           <TwitterIcon fontSize="small" />
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="/">
+        <Link href="/tiktok">
           <i className="fa-brands fa-tiktok" />
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="/">
+        <Link href="/instagram">
           <InstagramIcon fontSize="small" />
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="/">
+        <Link href="/account/login">
           <PersonOutlineOutlinedIcon fontSize="medium" />
-        </a>
+        </Link>
       </li>
       <li className="relative">
-        <a href="#" onClick={() => setToggleSearchBox(!toggleSearchBox)}>
+        <Link
+          href="/search"
+          onClick={(e) => {
+            e.preventDefault();
+            setToggleSearchBox((prev) => !prev);
+          }}
+        >
           <SearchOutlinedIcon fontSize="medium" />
-        </a>
+        </Link>
         {toggleSearchBox && (
           <SearchBox setToggleSearchBox={setToggleSearchBox} />
         )}
       </li>
       <li style={{ paddingRight: "0px" }} className="p-0 relative">
-        <a
-          href="#"
+        <Link
+          href="/cart"
           className="group"
-          onClick={() => setToggleCart(!toggleCart)}
+          onClick={(e) => {
+            e.preventDefault();
+            setToggleCart((prev) => !prev);
+          }}
         >
           <LocalMallOutlinedIcon fontSize="medium" />
           <span className=" group-hover:bg-customYellow notification-badge  bg-gray-50 text-customBlack">
             0
           </span>
-        </a>
+        </Link>
         {toggleCart && <Cart setToggleCart={setToggleCart} />}
       </li>
     </ul>

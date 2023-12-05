@@ -3,6 +3,7 @@ import Image from "next/image";
 import LeftNavbarOptions from "./LeftNavbarOptions";
 import RightNavOptions from "./RightNavOptions";
 import logo from "../../public/brava-logo.webp";
+import Link from "next/link";
 
 const Navbar = ({ brands }) => {
   return (
@@ -13,9 +14,9 @@ const Navbar = ({ brands }) => {
       >
         <div className="main-content flex items-center justify-between px-9">
           <LeftNavbarOptions brands={brands} />
-          <a href="/">
+          <Link href="/">
             <Image width={124} height={70} alt="brava logo" src={logo} />
-          </a>
+          </Link>
           <RightNavOptions />
         </div>
       </nav>

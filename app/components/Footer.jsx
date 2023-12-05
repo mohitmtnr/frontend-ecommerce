@@ -1,16 +1,15 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col justify-center items-center bg-gray-200">
+    <footer className="flex flex-col justify-center items-center bg-gray-100">
       <section className="grid grid-flow-row grid-cols-2 col w-full my-5 pl-10">
         <div className="col-span-1" style={{ width: "500px" }}>
-          <a href="/" className="font-bold">
-            get on the list
-          </a>
+          <h5 className="font-bold">get on the list</h5>
 
           <p className="my-5">exclusive discounts/giveaways/premier access</p>
-          <form className="relative send-email-form box-border flex items-center mb-10">
+          <form className="relative send-email-form box-border flex items-center">
             <input
               type="text"
               id="email"
@@ -19,7 +18,7 @@ const Footer = () => {
             />
             <label
               htmlFor="email"
-              className="absolute left-2 top-2  px-2 py-1 bg-gray-200"
+              className="absolute left-2 top-2  px-2 py-1 bg-gray-100 rounded-full"
             >
               email
             </label>
@@ -30,84 +29,84 @@ const Footer = () => {
               &#129122;
             </button>
           </form>
-          <div className="flex justify-start items-center">
-            <a>
-              <i class="fa-brands fa-twitter rounded-full p-3 text-xl border-2 border-customBlack mr-3"></i>
-            </a>
-            <a>
-              <i class="fa-brands fa-tiktok rounded-full p-3 text-xl border-2 border-customBlack mr-3"></i>
-            </a>
-            <a>
-              <i class="fa-brands fa-instagram rounded-full p-3 text-xl border-2 border-customBlack mr-3"></i>
-            </a>
+          <div className="flex justify-start items-center my-20">
+            <Link href="/twitter">
+              <i className="fa-brands fa-twitter rounded-full p-3 text-xl border-2 border-customBlack mr-3"></i>
+            </Link>
+            <Link href="/tiktok">
+              <i className="fa-brands fa-tiktok rounded-full p-3 text-xl border-2 border-customBlack mr-3"></i>
+            </Link>
+            <Link href="/instagram">
+              <i className="fa-brands fa-instagram rounded-full p-3 text-xl border-2 border-customBlack mr-3"></i>
+            </Link>
           </div>
         </div>
 
         <div className="grid grid-flow-row grid-cols-3 ">
           <div className="col-span-1">
-            <a href="/" className="font-bold">
+            <Link href="/shop" className="font-bold">
               shop
-            </a>
+            </Link>
             <ul className="mt-4">
               <li>
-                <a href="/">brands</a>
+                <Link href="/brands">brands</Link>
               </li>
               <li>
-                <a href="/">apparel</a>
+                <Link href="/apparel">apparel</Link>
               </li>
               <li>
-                <a href="/">art</a>
+                <Link href="/art">art</Link>
               </li>
               <li>
-                <a href="/">accessories</a>
+                <Link href="/accessories">accessories</Link>
               </li>
             </ul>
           </div>
           <div className="col-span-1">
-            <a href="/" className="font-bold">
+            <Link href="/company" className="font-bold">
               company
-            </a>
+            </Link>
             <ul className="mt-4">
               <li>
-                <a href="/">about us</a>
+                <Link href="/about-us">about us</Link>
               </li>
               <li>
-                <a href="/">brava spotlight</a>
+                <Link href="/brava-spotlight">brava spotlight</Link>
               </li>
               <li>
-                <a href="/">join brava</a>
+                <Link href="/join-brava">join brava</Link>
               </li>
               <li>
-                <a href="/">become an affiliate</a>
+                <Link href="/become-an-affiliate">become an affiliate</Link>
               </li>
               <li>
-                <a href="/">privacy policy</a>
+                <Link href="/privacy-policy">privacy policy</Link>
               </li>
             </ul>
           </div>
           <div>
-            <a href="/" className="font-bold">
+            <Link href="/help" className="font-bold">
               help
-            </a>
+            </Link>
             <ul className="mt-4">
               <li>
-                <a href="/">info@bravaland.com</a>
+                <Link href="/info@bravaland.com">info@bravaland.com</Link>
               </li>
               <li>
-                <a href="/">return/exchanges</a>
+                <Link href="/return/exchange">return/exchanges</Link>
               </li>
               <li>
-                <a href="/">faqs</a>
+                <Link href="/faqs">faqs</Link>
               </li>
               <li>
-                <a href="/">contact us</a>
+                <Link href="/contact-us">contact us</Link>
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <p className="py-7 bg-customBlack w-full text-center text-gray-50">
+      <p className="py-7 bg-customBlack w-full text-center text-gray-50 ">
         Copyright &copy; brava 2023. All rights reserved.
       </p>
     </footer>

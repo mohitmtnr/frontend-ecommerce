@@ -10,6 +10,7 @@ import SlideShow from "./components/SlideShow";
 import { TopAnnouncement } from "./components/TopAnnouncement";
 import NewArrival from "./components/NewArrival";
 import Footer from "./components/Footer";
+import PremiumGear from "./components/PremiumGear";
 
 export default function Home() {
   const brands = [
@@ -30,6 +31,7 @@ export default function Home() {
       <Banner />
       <SlideShow brands={brands} />
       <NewArrival />
+      <PremiumGear />
       <Footer />
     </main>
   );

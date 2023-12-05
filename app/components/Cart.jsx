@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import CloseIcon from "@mui/icons-material/Close";
+import Link from "next/link";
 
 const Cart = ({ setToggleCart }) => {
   return (
@@ -34,13 +35,13 @@ const Cart = ({ setToggleCart }) => {
           <p>Your cart is currently empty.</p>
         </div>
         <div className="mt-3">
-          <a
-            href="/"
+          <Link
+            href="/shop"
             type="button"
             className="start-shopping-button px-8 !py-3  text-white rounded-full text-sm"
           >
             start shopping
-          </a>
+          </Link>
         </div>
       </div>
     </section>

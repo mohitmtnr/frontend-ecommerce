@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Slider from "react-slick";
+import Link from "next/link";
 
 const SlideShow = ({ brands }) => {
   const settings = {
@@ -23,7 +24,7 @@ const SlideShow = ({ brands }) => {
           brands.map((data, index) => (
             <div key={index}>
               <div className="slide-show  bg-customBlack">
-                <a href={data.linkToBrand} className="w-fit">
+                <Link href={data.linkToBrand} className="w-fit">
                   <Image
                     src={data.image}
                     width={375}
@@ -33,18 +34,21 @@ const SlideShow = ({ brands }) => {
                     loading="eager"
                     priority={true}
                   />
-                </a>
+                </Link>
 
                 <div className="slide-show-content text-gray-50 flex flex-col justify-evenly h-full pr-6">
-                  <a
+                  <Link
                     href={data.linkToBrand}
                     className="slide-show-brand-name text-right"
                   >
                     {data.brandName}
-                  </a>
-                  <a href={data.linkToBrand} className="underline text-right">
+                  </Link>
+                  <Link
+                    href={data.linkToBrand}
+                    className="underline text-right"
+                  >
                     shop now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
