@@ -39,7 +39,8 @@ body {
   margin: 6px auto;
 }
 
-.cart .start-shopping-button {
+.cart .start-shopping-button,
+.start-shopping-button {
   background: linear-gradient(#212122, #212122 50%, white 50%, white);
   background-size: 100% 200%;
   border: 1px solid #212122 !important;
@@ -47,7 +48,8 @@ body {
   transition: all linear 250ms;
 }
 
-.cart .start-shopping-button:hover {
+.cart .start-shopping-button:hover,
+.start-shopping-button:hover {
   background-position: 100% 100%;
   color: #212122;
 }

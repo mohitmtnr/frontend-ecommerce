@@ -6,7 +6,7 @@ const Cards = ({ source, colorCodes, description, price, collectionUrl }) => {
     <a
       href={collectionUrl}
       id="collection-card"
-      className="h-full w-full rounded-md "
+      className="group h-full w-full rounded-md "
     >
       <Image
         src={source}
@@ -22,11 +22,13 @@ const Cards = ({ source, colorCodes, description, price, collectionUrl }) => {
             <span
               key={index}
               style={{ backgroundColor: color }}
-              className="inline-block w-5 h-5 rounded-full mr-5"
+              className="inline-block w-5 h-5 rounded-full mr-3"
             ></span>
           ))}
-        <p>{description}</p>
-        <button>{price}</button>
+        <p className="mb-2">{description}</p>
+        <button className=" border-2 border-200 group-hover:bg-customYellow py-2 px-10 rounded-full">
+          Rs. {price}
+        </button>
       </section>
     </a>
   );
